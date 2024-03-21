@@ -2,6 +2,7 @@ import tkinter
 
 fenetre = tkinter.Tk()
 fenetre.geometry("350x180")
+fenetre.title("Addition")
 
 def addition():
     nb = nombre.get()
@@ -10,10 +11,10 @@ def addition():
 
 nombre = tkinter.IntVar()
 lbl1 = tkinter.Label(fenetre , text="Entrer N")
-zone_saisi = tkinter.Entry(fenetre , textvariable=nombre )
+zone_saisi = tkinter.Entry(fenetre , textvariable=nombre, bd=3 )
 lbl2 = tkinter.Label(fenetre , text="Le double de N =")
-resultat = tkinter.Label(fenetre , text="")
-btn = tkinter.Button(fenetre , text="Valider l'operation" , command=addition)
+resultat = tkinter.Label(fenetre , text="" , fg="red")
+btn = tkinter.Button(fenetre , text="Valider l'operation" , command=addition, bd=3)
 
 lbl1.grid(column=0 , row=0 , padx=25 , pady=25)
 zone_saisi.grid(column=1 , row=0 )
