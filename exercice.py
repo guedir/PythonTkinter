@@ -1,8 +1,10 @@
 import tkinter
 
 fenetre = tkinter.Tk()
-fenetre.geometry("350x180")
+fenetre.geometry("350x180+450+200")
 fenetre.title("Addition")
+fenetre.resizable(False,False)
+
 
 def addition():
     nb = nombre.get()
