@@ -4,6 +4,7 @@ fenetre = tkinter.Tk()
 fenetre.geometry("350x180+450+200")
 fenetre.title("Addition")
 fenetre.resizable(False,False)
+fenetre.configure(bg="#2F4F4F")
 
 
 def addition():
@@ -12,10 +13,10 @@ def addition():
     resultat.config(text=f"{addi}")
 
 nombre = tkinter.IntVar()
-lbl1 = tkinter.Label(fenetre , text="Entrer N")
+lbl1 = tkinter.Label(fenetre , text="Entrer N" , bg="#2F4F4F")
 zone_saisi = tkinter.Entry(fenetre , textvariable=nombre, bd=3 )
-lbl2 = tkinter.Label(fenetre , text="Le double de N =")
-resultat = tkinter.Label(fenetre , text="" , fg="red")
+lbl2 = tkinter.Label(fenetre , text="Le double de N =" , bg="#2F4F4F")
+resultat = tkinter.Label(fenetre , text="" , fg="red" , bg="#2F4F4F")
 btn = tkinter.Button(fenetre , text="Valider l'operation" , command=addition, bd=3)
 
 lbl1.grid(column=0 , row=0 , padx=25 , pady=25)
