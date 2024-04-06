@@ -1,4 +1,5 @@
 import tkinter
+from tkinter import messagebox
 
 fenetre = tkinter.Tk()
 fenetre.geometry("350x180+450+200")
@@ -8,9 +9,9 @@ fenetre.configure(bg="#2F4F4F")
 
 
 def addition():
-    nb = nombre.get()
-    addi = (nb*2)
-    resultat.config(text=f"{addi}")
+        nb = nombre.get()
+        addi = (nb*2)
+        resultat.config(text=f"Le double de {nb} est {addi}")
 
 nombre = tkinter.IntVar()
 lbl1 = tkinter.Label(fenetre , text="Entrer N" , bg="#2F4F4F" , font=("sans serif",10,"bold"))
