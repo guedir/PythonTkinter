@@ -9,9 +9,16 @@ fenetre.configure(bg="#2F4F4F")
 
 
 def addition():
-        nb = nombre.get()
-        addi = (nb*2)
-        resultat.config(text=f"Le double de {nb} est {addi}")
+        try:
+            nb = nombre.get()
+        
+            #nb == int(nb)
+            #nb = int(nb)
+            addi = nb*2
+            resultat.config(text=f"Le double de {nb} est {addi}")
+        except Exception as e:
+             #print(e)
+             messagebox.showerror("Erreur","Veuillez saisir un nombre !!!")
 
 nombre = tkinter.IntVar()
 lbl1 = tkinter.Label(fenetre , text="Entrer N" , bg="#2F4F4F" , font=("sans serif",10,"bold"))
