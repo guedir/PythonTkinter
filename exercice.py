@@ -19,7 +19,8 @@ def addition():
             messagebox.showerror("Erreur","Veuillez saisir un nombre !!!")
 
 def effacer():
-     nombre.delete(0, Tk.END)   
+     nombre.set(0)  
+     resultat.config(text="")
 
 nombre = tkinter.IntVar()
 lbl1 = tkinter.Label(fenetre , text="Entrer N" , bg="#2F4F4F" , font=("sans serif",10,"bold"))
