@@ -21,6 +21,7 @@ def addition():
 def effacer():
      nombre.set(0)  
      resultat.config(text="")
+     messagebox.showinfo("Information","vous avez rénitialiser les champs")
 
 def quitter():
      quit()
