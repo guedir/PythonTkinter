@@ -19,9 +19,12 @@ def addition():
             messagebox.showerror("Erreur","Veuillez saisir un nombre !!!")
 
 def effacer():
-     nombre.set(0)  
-     resultat.config(text="")
-     messagebox.showinfo("Information","vous avez rénitialiser les champs")
+     if nombre.get() == 0 :
+          messagebox.showwarning("information","Les champs sont vides")
+     else:
+          nombre.set(0)  
+          resultat.config(text="")
+          messagebox.showinfo("Information","vous avez rénitialiser les champs")
 
 def quitter():
      quit()
